@@ -1,23 +1,25 @@
-import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import HomePage from './pages/HomePage';
-import SingUpPage from './pages/SingUpPage';
-import SingInPage from './pages/SingInPage';
+import React                                      from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import HomePage                                   from './pages/HomePage.js';
+import SignUpPage                                 from './pages/SignUpPage';
+import SignInPage                                 from './pages/SignInPage';
 
-function App() {
+function App () {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" >
+
+        <Route exact path="/">
           <HomePage/>
         </Route>
 
-        <Route path="/sing_up">
-          <SingUpPage/>
+
+        <Route path="/sign_up">
+          <SignUpPage/>
         </Route>
 
-        <Route path={['sing_in', '/login']}>
-          <SingInPage/>
+        <Route path={['/sign_in', '/login']}>
+          <SignInPage/>
         </Route>
 
       </Switch>
